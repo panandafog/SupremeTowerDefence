@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "secondwindow.h"
+#include "game.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,6 +21,7 @@ private slots:
     void on_pushButton_2_clicked();
 private:
     Ui::MainWindow *ui;
-    SecondWindow *level;
+    //SecondWindow *level;
+
 };
 #endif // MAINWINDOW_H

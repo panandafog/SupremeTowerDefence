@@ -16,19 +16,55 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bullet.cpp \
+    enemy.cpp \
+    fiend.cpp \
+    game.cpp \
+    gamemap.cpp \
     main.cpp \
     mainwindow.cpp \
-    secondwindow.cpp \
+    medtower.cpp \
+    megasav.cpp \
+    nexus.cpp \
+    savage.cpp \
+    strongtower.cpp \
+    tower.cpp \
+    weaktower.cpp
 
 HEADERS += \
+    bullet.h \
+    enemy.h \
+    fiend.h \
+    game.h \
+    gamemap.h \
     mainwindow.h \
-    secondwindow.h
+    medtower.h \
+    megasav.h \
+    nexus.h \
+    savage.h \
+    strongtower.h \
+    tower.h \
+    weaktower.h
 
 FORMS += \
-    mainwindow.ui \
-    secondwindow.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    images.qrc
+
+DISTFILES += \
+    STD.pro.user \
+    chari.png \
+    charizard.png \
+    charmander.png \
+    charmeleon.png \
+    fire.png \
+    mixtape.png \
+    nexus.png \
+    realmap.png \
+    weak.png
