@@ -23,14 +23,14 @@ savage::savage(QGraphicsItem *parent){
    (this)->setBrush(QBrush(Qt::darkCyan));
 
     //HEALTH BAR!!!
-    health = 150;
-    STEP_SIZE = 7;
+    health_ = 150;
+    stepSize_ = 7;
 
     // set points
-    points << QPointF(97,82) << QPointF(790,82); // move down-right then right
-    point_index = 0;
-    destination = points[0];
-    rotateToPoint(destination);
+    points_ << QPointF(97,82) << QPointF(790,82); // move down-right then right
+    pointIndex_ = 0;
+    destination_ = points_[0];
+    rotateToPoint(destination_);
 
     // connect timer to move_forward
     QTimer * timer = new QTimer(this);

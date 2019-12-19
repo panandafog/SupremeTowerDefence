@@ -25,23 +25,23 @@ void enemy::rotateToPoint(QPointF p){
 
 void enemy::move_forward(){
     // if close to dest, rotate to next dest
-    QLineF ln(pos(),destination);
+    QLineF ln(pos(),destination_);
     if (ln.length() < 5){
-        point_index++;
-        if (point_index>=points.size()){
+        pointIndex_++;
+        if (pointIndex_>=points_.size()){
            // qDebug()<<"Damn bukiki, back at it again with the barakis!";
             return;
         }
-        destination = points[point_index];
-        rotateToPoint(destination);
+        destination_ = points_[pointIndex_];
+        rotateToPoint(destination_);
     }
 
     // move enemy forward at current angle
 
     double theta = rotation(); // degrees
 
-    double dy = STEP_SIZE * qSin(qDegreesToRadians(theta));
-    double dx = STEP_SIZE * qCos(qDegreesToRadians(theta));
+    double dy = stepSize_ * qSin(qDegreesToRadians(theta));
+    double dx = stepSize_ * qCos(qDegreesToRadians(theta));
 
     setPos(x()+dx, y()+dy);
 }

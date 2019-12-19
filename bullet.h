@@ -15,8 +15,8 @@ public slots:
     void setMaxRange(double range);
     void setDistanceTravelled(double distance);
 private:
-    double maxRange;
-    double distanceTravelled;
+    double maxRange_;
+    double distanceTravelled_;
 
 };
 #endif // BULLET_H

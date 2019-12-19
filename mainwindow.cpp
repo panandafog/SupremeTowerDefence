@@ -6,16 +6,16 @@ extern Game * game;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui_(new Ui::MainWindow)
 {
-    ui->setupUi(this);
+    ui_->setupUi(this);
     //level = new SecondWindow();
     //connect(level, &SecondWindow::mainWindow, this, &MainWindow::show);
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+    delete ui_;
 }
 
 void MainWindow::on_pushButton_clicked()

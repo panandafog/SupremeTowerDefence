@@ -10,7 +10,8 @@ public:
     void mousePressEvent(QMouseEvent*event);
 
     // member attributes
-    QGraphicsScene * scene;
+    QGraphicsScene * scene_;
 };
+
 
 #endif // GAME_H

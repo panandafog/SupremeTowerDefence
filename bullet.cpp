@@ -14,8 +14,8 @@ bullet::bullet(QGraphicsItem *parent)
     connect(moveTimer,SIGNAL(timeout()),this, SLOT(move()));//connects a certain signal to a certain slot
     moveTimer->start(50); //every 50ms the move function will be executed
 
-    maxRange = 100;
-    distanceTravelled = 0;
+    maxRange_ = 100;
+    distanceTravelled_ = 0;
 
 }
 
@@ -33,20 +33,20 @@ void bullet::move()
 
 double bullet::getMaxRange()
 {
-    return maxRange;
+    return maxRange_;
 }
 
 double bullet::getDistanceTravelled()
 {
-    return distanceTravelled;
+    return distanceTravelled_;
 }
 
 void bullet::setMaxRange(double range)
 {
-    maxRange = range;
+    maxRange_ = range;
 }
 
 void bullet::setDistanceTravelled(double distance)
 {
-    distanceTravelled = distance;
+    distanceTravelled_ = distance;
 }

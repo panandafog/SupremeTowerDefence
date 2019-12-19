@@ -71,13 +71,13 @@ void medtower::attackTarget(){
     int angle = -1* ln.angle(); // gives you the angle of the line in counter clockwise so we multiply by -1
 
     bull2->setRotation(angle);
-    game->scene->addItem(bull2);
+    game->scene_->addItem(bull2);
 
     bull3->setRotation(angle+10);
-    game->scene->addItem(bull3);
+    game->scene_->addItem(bull3);
 
     bull4->setRotation(angle-10);
-    game->scene->addItem(bull4);
+    game->scene_->addItem(bull4);
 }
 
 void medtower::tracking(){

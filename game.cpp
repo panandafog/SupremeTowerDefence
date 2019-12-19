@@ -19,11 +19,11 @@
 
 Game::Game(): QGraphicsView(){
     //create a scene
-  scene = new QGraphicsScene(this);
-  scene->setSceneRect(0,0,800,600);
+  scene_ = new QGraphicsScene(this);
+  scene_->setSceneRect(0,0,800,600);
 
     //set the scene
-  setScene(scene);
+  setScene(scene_);
 
   //alter window
   setFixedSize(800,600);
@@ -31,51 +31,51 @@ Game::Game(): QGraphicsView(){
   setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
   gameMap * realMap = new gameMap();
-  scene->addItem(realMap);
+  scene_->addItem(realMap);
 
   fiend * hoodrat = new fiend();
-  scene->addItem(hoodrat);
+  scene_->addItem(hoodrat);
 
   megasav * enemy2 = new megasav();
-  scene->addItem(enemy2);
+  scene_->addItem(enemy2);
 
   savage * enemy3 = new savage();
-  scene->addItem(enemy3);
+  scene_->addItem(enemy3);
 
   weaktower * weak = new weaktower();
-  scene->addItem(weak);
+  scene_->addItem(weak);
 
   weaktower * weak1 = new weaktower();
   weak1->setPos(50,50);
-  scene->addItem(weak1);
+  scene_->addItem(weak1);
 
   medtower * med = new medtower();
   med->setPos(400,100);
-  scene->addItem(med);
+  scene_->addItem(med);
 
   strongtower * strong = new strongtower();
   strong->setPos(300,200);
-  scene->addItem(strong);
+  scene_->addItem(strong);
 
   nexus * home = new nexus();
   home->setPos(720, 62);
-  scene->addItem(home);
+  scene_->addItem(home);
 
   nexus * home2 = new nexus();
   home2->setPos(720, 215);
-  scene->addItem(home2);
+  scene_->addItem(home2);
 
 }
 
 void Game::mousePressEvent(QMouseEvent *event)
 {
     //create bullet
-  bullet * bull1 = new bullet();
-  bull1->setPos(event->pos());
-  bull1->setRotation(40);
-  scene->addItem(bull1);
+  //bullet * bull1 = new bullet();
+  //bull1->setPos(event->pos());
+  //bull1->setRotation(40);
+  //scene->addItem(bull1);
 
     //make an enemy
-  enemy * enemy1 = new enemy();
-  scene->addItem(enemy1);
+  savage * enemy1 = new savage();
+  scene_->addItem(enemy1);
 }

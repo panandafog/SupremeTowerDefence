@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>chari.png</file>
+        <file>charmander.png</file>
+        <file>charmeleon.png</file>
+        <file>fire.png</file>
+        <file>mixtape.png</file>
+        <file>realmap.png</file>
+        <file>nexus.png</file>
+        <file>weak.png</file>
+    </qresource>
+</RCC>
