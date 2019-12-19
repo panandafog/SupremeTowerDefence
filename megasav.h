@@ -8,7 +8,8 @@
 #include <QtCore>
 #include "enemy.h"
 
-class megasav: public enemy{
+class megasav: public enemy
+{
     Q_OBJECT //need to include QOBJECT macro
 
 public:

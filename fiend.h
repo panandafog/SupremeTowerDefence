@@ -9,7 +9,8 @@
 #include "enemy.h"
 #include <QGraphicsObject>
 
-class fiend: public enemy{
+class fiend: public enemy
+{
     Q_OBJECT
 
 public:

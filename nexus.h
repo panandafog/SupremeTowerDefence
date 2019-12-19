@@ -4,8 +4,8 @@
 #include "QObject"
 #include "QGraphicsPixmapItem"
 
-class nexus: public tower{
-
+class nexus: public tower
+{
 public:
     nexus(QGraphicsItem * parent=0);
     int life;

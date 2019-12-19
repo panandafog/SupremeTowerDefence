@@ -3,7 +3,8 @@
 #include <QGraphicsView>
 #include <QMouseEvent>
 
-class Game: public QGraphicsView{
+class Game: public QGraphicsView
+{
 public:
     // member functions
     Game();

@@ -5,7 +5,8 @@
 #include "tower.h"
 #include "game.h"
 
-class weaktower: public tower{
+class weaktower: public tower
+{
     Q_OBJECT
 public:
     weaktower(QGraphicsItem * parent=0);

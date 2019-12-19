@@ -8,7 +8,8 @@
 #include <QtCore>
 #include <QPolygonF>
 
-class enemy: public QObject,public QGraphicsPolygonItem {
+class enemy: public QObject,public QGraphicsPolygonItem
+{
 
     Q_OBJECT //need to include QOBJECT macro
 

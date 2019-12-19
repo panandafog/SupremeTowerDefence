@@ -3,7 +3,8 @@
 #include <QObject>
 #include <QGraphicsPixmapItem>
 
-class bullet: public QObject, public QGraphicsPixmapItem{
+class bullet: public QObject, public QGraphicsPixmapItem
+{
     Q_OBJECT
 public:
     bullet(QGraphicsItem*parent=0);

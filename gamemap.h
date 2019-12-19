@@ -2,7 +2,8 @@
 #define GAMEMAP_H
 #include <QGraphicsPixmapItem>
 
-class gameMap: public QGraphicsPixmapItem{
+class gameMap: public QGraphicsPixmapItem
+{
 
 public:
     gameMap(QGraphicsItem*parent=0);

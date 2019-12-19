@@ -5,7 +5,8 @@
 #include "tower.h"
 #include "game.h"
 
-class medtower: public tower{
+class medtower: public tower
+{
     Q_OBJECT
 public:
     medtower(QGraphicsItem * parent=0);

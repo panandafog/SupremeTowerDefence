@@ -5,7 +5,8 @@
 #include "tower.h"
 #include "game.h"
 
-class strongtower: public tower{
+class strongtower: public tower
+{
     Q_OBJECT
 public:
     strongtower(QGraphicsItem * parent=0);

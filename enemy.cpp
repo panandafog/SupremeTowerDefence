@@ -11,12 +11,7 @@
 #include <QPainter>
 enemy::enemy(QGraphicsItem *parent){
 
-
-
-
 }
-
-
 
 void enemy::rotateToPoint(QPointF p){
     QLineF ln(pos(),p);

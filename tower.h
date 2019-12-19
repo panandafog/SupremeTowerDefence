@@ -7,7 +7,8 @@
 #include <QObject>
 
 
-class tower:public QObject, public QGraphicsPixmapItem{
+class tower:public QObject, public QGraphicsPixmapItem
+{
     Q_OBJECT
 public:
     tower(QGraphicsItem *parent=0);
