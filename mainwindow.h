@@ -5,23 +5,26 @@
 #include "game.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui
+{
+class MainWindow;
+}
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-void close_clicked();
+  MainWindow(QWidget *parent = nullptr);
+  ~MainWindow();
+  void close_clicked();
 private slots:
-    void on_pushButton_clicked();
-    void on_pushButton_2_clicked();
+  void on_pushButton_clicked();
+  void on_pushButton_2_clicked();
 private:
-    Ui::MainWindow *ui_;
-    //SecondWindow *level;
+  Ui::MainWindow *ui_;
+  //SecondWindow *level;
 
 };
 #endif // MAINWINDOW_H

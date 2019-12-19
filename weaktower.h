@@ -7,12 +7,12 @@
 
 class weaktower: public tower
 {
-    Q_OBJECT
+  Q_OBJECT
 public:
-    weaktower(QGraphicsItem * parent=0);
-    void  attackTarget();
+  weaktower(QGraphicsItem *parent = 0);
+  void attackTarget();
 public slots:
-    void tracking();
+  void tracking();
 
 };
 

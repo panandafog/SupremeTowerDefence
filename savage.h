@@ -11,13 +11,13 @@
 
 class savage: public enemy
 {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    savage(QGraphicsItem * parent=0); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
+  savage(QGraphicsItem *parent = 0); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
 
 public slots:
-    void move_forward();
+  void move_forward();
 
 };
 #endif // SAVAGE_H

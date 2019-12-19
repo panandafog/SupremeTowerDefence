@@ -9,7 +9,8 @@
 #include <QPolygonF>
 #include <QPointF>
 #include <QPainter>
-enemy::enemy(QGraphicsItem *parent){
+enemy::enemy(QGraphicsItem *parent)
+{
 
 }
 
@@ -43,30 +44,35 @@ void enemy::setHealth(double health)
   health_ = health;
 };
 
-void enemy::rotateToPoint(QPointF p){
-    QLineF ln(pos(),p);
-    setRotation(-1 * ln.angle());
+void enemy::rotateToPoint(QPointF p)
+{
+  QLineF ln(pos(), p);
+  setRotation(-1 * ln.angle());
 }
 
-void enemy::move_forward(){
-    // if close to dest, rotate to next dest
-    QLineF ln(pos(),destination_);
-    if (ln.length() < 5){
-        pointIndex_++;
-        if (pointIndex_>=points_.size()){
-           // qDebug()<<"Damn bukiki, back at it again with the barakis!";
-            return;
-        }
-        destination_ = points_[pointIndex_];
-        rotateToPoint(destination_);
+void enemy::move_forward()
+{
+  // if close to dest, rotate to next dest
+  QLineF ln(pos(), destination_);
+
+  if (ln.length() < 5) {
+    pointIndex_++;
+
+    if (pointIndex_ >= points_.size()) {
+      // qDebug()<<"Damn bukiki, back at it again with the barakis!";
+      return;
     }
 
-    // move enemy forward at current angle
+    destination_ = points_[pointIndex_];
+    rotateToPoint(destination_);
+  }
 
-    double theta = rotation(); // degrees
+  // move enemy forward at current angle
 
-    double dy = stepSize_ * qSin(qDegreesToRadians(theta));
-    double dx = stepSize_ * qCos(qDegreesToRadians(theta));
+  double theta = rotation(); // degrees
 
-    setPos(x()+dx, y()+dy);
+  double dy = stepSize_ * qSin(qDegreesToRadians(theta));
+  double dx = stepSize_ * qCos(qDegreesToRadians(theta));
+
+  setPos(x() + dx, y() + dy);
 }

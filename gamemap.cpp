@@ -7,6 +7,6 @@
 
 gameMap::gameMap(QGraphicsItem *parent)
 {
-    setPixmap(QPixmap(":/images/realmap.png"));
+  setPixmap(QPixmap(":/images/realmap.png"));
 
 }

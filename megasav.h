@@ -10,12 +10,12 @@
 
 class megasav: public enemy
 {
-    Q_OBJECT //need to include QOBJECT macro
+  Q_OBJECT //need to include QOBJECT macro
 
 public:
-    megasav(QGraphicsItem * parent=0); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
+  megasav(QGraphicsItem *parent = 0); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
 
 public slots:
-    void move_forward();
+  void move_forward();
 };
 #endif // MEGASAV_H

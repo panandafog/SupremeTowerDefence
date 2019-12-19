@@ -2,16 +2,16 @@
 #include <QApplication>
 #include "game.h"
 
-Game * game;
+Game *game;
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
+  QApplication app(argc, argv);
 
-    game = new Game();
+  game = new Game();
 
-    MainWindow mainWindow;
-    mainWindow.show();
+  MainWindow mainWindow;
+  mainWindow.show();
 
-    return app.exec();
+  return app.exec();
 }

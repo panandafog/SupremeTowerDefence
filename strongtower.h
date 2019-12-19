@@ -7,11 +7,11 @@
 
 class strongtower: public tower
 {
-    Q_OBJECT
+  Q_OBJECT
 public:
-    strongtower(QGraphicsItem * parent=0);
-    void  attackTarget();
+  strongtower(QGraphicsItem *parent = 0);
+  void  attackTarget();
 public slots:
-    void tracking();
+  void tracking();
 };
 #endif // STRONGTOWER_H

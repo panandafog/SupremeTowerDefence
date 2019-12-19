@@ -6,12 +6,12 @@
 class Game: public QGraphicsView
 {
 public:
-    // member functions
-    Game();
-    void mousePressEvent(QMouseEvent*event);
+  // member functions
+  Game();
+  void mousePressEvent(QMouseEvent *event);
 
-    // member attributes
-    QGraphicsScene * scene_;
+  // member attributes
+  QGraphicsScene *scene_;
 };
 
 

@@ -11,37 +11,39 @@
 #include <QPainter>
 #include "enemy.h"
 
-megasav::megasav(QGraphicsItem *parent){
-    // set graphics
-    QPolygonF poly3;
-    poly3 << QPointF(0, 0)
-         << QPointF(10, 10)
-         << QPointF(15,25)
-         << QPointF(0,35)
-         << QPointF(-15,25)
-         << QPointF(-15,15);
+megasav::megasav(QGraphicsItem *parent)
+{
+  // set graphics
+  QPolygonF poly3;
+  poly3 << QPointF(0, 0)
+        << QPointF(10, 10)
+        << QPointF(15, 25)
+        << QPointF(0, 35)
+        << QPointF(-15, 25)
+        << QPointF(-15, 15);
 
-    (this)->setPolygon(poly3);
-    (this)->setPen(QPen(Qt::Dense2Pattern));
-    (this)->setBrush(QBrush(Qt::Dense2Pattern));
+  (this)->setPolygon(poly3);
+  (this)->setPen(QPen(Qt::Dense2Pattern));
+  (this)->setBrush(QBrush(Qt::Dense2Pattern));
 
-    //HEALTH BAR!!!
-    health_ = 200;
-    stepSize_ = 6; //speed
+  //HEALTH BAR!!!
+  health_ = 200;
+  stepSize_ = 6; //speed
 
 
-    // set points
-    points_ << QPointF(110,80) << QPointF(110,355)<<QPointF(340,355)<< QPointF(340,234)<< QPointF(800, 234); // move down-right then right
-    pointIndex_ = 0;
-    destination_ = points_[0];
-    rotateToPoint(destination_);
+  // set points
+  points_ << QPointF(110, 80) << QPointF(110, 355) << QPointF(340, 355) << QPointF(340, 234) << QPointF(800, 234); // move down-right then right
+  pointIndex_ = 0;
+  destination_ = points_[0];
+  rotateToPoint(destination_);
 
-    // connect timer to move_forward
-    QTimer * timer = new QTimer(this);
-    connect(timer,SIGNAL(timeout()),this,SLOT(move_forward()));
-    timer->start(150);
+  // connect timer to move_forward
+  QTimer *timer = new QTimer(this);
+  connect(timer, SIGNAL(timeout()), this, SLOT(move_forward()));
+  timer->start(150);
 }
 
-void megasav::move_forward(){
-    enemy::move_forward();
+void megasav::move_forward()
+{
+  enemy::move_forward();
 }

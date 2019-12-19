@@ -7,11 +7,11 @@
 
 class medtower: public tower
 {
-    Q_OBJECT
+  Q_OBJECT
 public:
-    medtower(QGraphicsItem * parent=0);
-    void  attackTarget();
+  medtower(QGraphicsItem *parent = 0);
+  void  attackTarget();
 public slots:
-    void tracking();
+  void tracking();
 };
 #endif // MEDTOWER_H

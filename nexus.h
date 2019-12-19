@@ -7,10 +7,10 @@
 class nexus: public tower
 {
 public:
-    nexus(QGraphicsItem * parent=0);
-    int life_;
+  nexus(QGraphicsItem *parent = 0);
+  int life_;
 public slots:
-    void tracking1();
+  void tracking1();
 };
 
 #endif // NEXUS_H
