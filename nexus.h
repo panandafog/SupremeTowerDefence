@@ -9,7 +9,7 @@ class nexus: public tower
 public:
   nexus(QGraphicsItem *parent = 0);
   int life_;
-public slots:
+private slots:
   void tracking1();
 };
 

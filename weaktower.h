@@ -11,7 +11,7 @@ class weaktower: public tower
 public:
   weaktower(QGraphicsItem *parent = 0);
   void attackTarget();
-public slots:
+private slots:
   void tracking();
 
 };

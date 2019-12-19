@@ -17,7 +17,7 @@ public:
   QGraphicsPolygonItem *field;
   QPointF attackDest; //this is the point that the tower will attack periodically
   bool hasTarget;
-public slots:
+protected slots:
   void tracking();
   void tracking1();
 };

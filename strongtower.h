@@ -11,7 +11,7 @@ class strongtower: public tower
 public:
   strongtower(QGraphicsItem *parent = 0);
   void  attackTarget();
-public slots:
+private slots:
   void tracking();
 };
 #endif // STRONGTOWER_H

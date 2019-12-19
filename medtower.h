@@ -11,7 +11,7 @@ class medtower: public tower
 public:
   medtower(QGraphicsItem *parent = 0);
   void  attackTarget();
-public slots:
+private slots:
   void tracking();
 };
 #endif // MEDTOWER_H
