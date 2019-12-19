@@ -15,7 +15,7 @@ public slots:
     double getDistanceTravelled();
     void setMaxRange(double range);
     void setDistanceTravelled(double distance);
-private:
+protected:
     double maxRange_;
     double distanceTravelled_;
 

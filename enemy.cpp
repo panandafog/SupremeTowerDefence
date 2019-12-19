@@ -13,6 +13,36 @@ enemy::enemy(QGraphicsItem *parent){
 
 }
 
+int enemy::getPointIndex()
+{
+  return pointIndex_;
+};
+
+int enemy::getStepSize()
+{
+  return stepSize_;
+};
+
+double enemy::getHealth()
+{
+  return health_;
+};
+
+void enemy::setPointIndex(int pointIndex)
+{
+  pointIndex_ = pointIndex;
+};
+
+void enemy::setStepSize(int stepSize)
+{
+  stepSize_ = stepSize;
+};
+
+void enemy::setHealth(double health)
+{
+  health_ = health;
+};
+
 void enemy::rotateToPoint(QPointF p){
     QLineF ln(pos(),p);
     setRotation(-1 * ln.angle());

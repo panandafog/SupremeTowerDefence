@@ -15,19 +15,26 @@ class enemy: public QObject,public QGraphicsPolygonItem
 
 public:
     enemy(QGraphicsItem * parent=0); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
+    void rotateToPoint(QPointF p); //will take a point and get enemy to face that point
 
+    int getPointIndex();
+    int getStepSize();
+    double getHealth();
+
+    void setPointIndex(int);
+    void setStepSize(int);
+    void setHealth(double);
+
+public slots:
+    void move_forward();//slots are connected to Qtimer, this allows enemy to move forward periodically
+
+protected:
     QList<QPointF> points_; //list of points
     QPointF destination_; //point to travel towards
     int pointIndex_; //which point are we at in list of points
     int stepSize_;
     double health_;
     QPolygonF poly2_;
-
-    void rotateToPoint(QPointF p); //will take a point and get enemy to face that point
-
-public slots:
-    void move_forward();//slots are connected to Qtimer, this allows enemy to move forward periodically
-
 };
 
 #endif // ENEMY_H
