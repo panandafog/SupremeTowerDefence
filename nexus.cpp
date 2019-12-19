@@ -52,7 +52,7 @@ nexus::nexus(QGraphicsItem *parent)
       connect(timer, SIGNAL(timeout()), this,SLOT(tracking1()));
       timer->start(1000);
 
-      life = 100;
+      life_ = 100;
 }
 
 void nexus::tracking1()
