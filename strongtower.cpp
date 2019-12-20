@@ -7,7 +7,7 @@
 #include <QPen>
 #include <QGraphicsScene>
 
-strongtower::strongtower(Level *level_ptr)
+StrongTower::StrongTower(Level *level_ptr)
 {
   level_ptr_ = level_ptr;
   //setting graphics
@@ -52,9 +52,9 @@ strongtower::strongtower(Level *level_ptr)
   timer->start(1000);
 }
 
-void strongtower::attackTarget()
+void StrongTower::attackTarget()
 {
-  bullet *bull2 = new bullet();
+  Bullet *bull2 = new Bullet();
   bull2->setPixmap(QPixmap(":/images/weak.png"));
   bull2->setPos(x() + 46, y() + 48); //centering the bullet
 
@@ -67,8 +67,8 @@ void strongtower::attackTarget()
 }
 
 
-void strongtower::tracking()
+void StrongTower::tracking()
 {
-  tower::tracking();
+  Tower::tracking();
 }
 

@@ -6,11 +6,11 @@
 class Level: public QGraphicsView
 {
 public:
-  // member functions
   Level();
-  void mousePressEvent(QMouseEvent *event);
-  // member attributes
   QGraphicsScene *scene_;
+
+private:
+  void mousePressEvent(QMouseEvent *event);
 };
 
 

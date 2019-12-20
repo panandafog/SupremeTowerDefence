@@ -32,38 +32,38 @@ Level::Level(): QGraphicsView()
   setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
   setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-  gameMap *realMap = new gameMap(this);
+  Map *realMap = new Map(this);
   scene_->addItem(realMap);
 
-  fiend *hoodrat = new fiend(this);
+  Fiend *hoodrat = new Fiend(this);
   scene_->addItem(hoodrat);
 
-  megasav *enemy2 = new megasav(this);
+  Megasav *enemy2 = new Megasav(this);
   scene_->addItem(enemy2);
 
-  savage *enemy3 = new savage(this);
+  Savage *enemy3 = new Savage(this);
   scene_->addItem(enemy3);
 
-  weaktower *weak = new weaktower(this);
+  WeakTower *weak = new WeakTower(this);
   scene_->addItem(weak);
 
-  weaktower *weak1 = new weaktower(this);
+  WeakTower *weak1 = new WeakTower(this);
   weak1->setPos(50, 50);
   scene_->addItem(weak1);
 
-  medtower *med = new medtower(this);
+  MedTower *med = new MedTower(this);
   med->setPos(400, 100);
   scene_->addItem(med);
 
-  strongtower *strong = new strongtower(this);
+  StrongTower *strong = new StrongTower(this);
   strong->setPos(300, 200);
   scene_->addItem(strong);
 
-  nexus *home = new nexus(this);
+  Nexus *home = new Nexus(this);
   home->setPos(720, 62);
   scene_->addItem(home);
 
-  nexus *home2 = new nexus(this);
+  Nexus *home2 = new Nexus(this);
   home2->setPos(720, 215);
   scene_->addItem(home2);
 }
@@ -77,6 +77,6 @@ void Level::mousePressEvent(QMouseEvent *event)
   //scene->addItem(bull1);
 
   //make an enemy
-  savage *enemy1 = new savage();
+  Savage *enemy1 = new Savage();
   scene_->addItem(enemy1);
 }

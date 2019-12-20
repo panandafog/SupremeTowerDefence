@@ -9,12 +9,12 @@
 #include "enemy.h"
 #include "level.h"
 
-class megasav: public enemy
+class Megasav: public Enemy
 {
   Q_OBJECT //need to include QOBJECT macro
 
 public:
-  megasav(Level *level_ptr = nullptr); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
+  Megasav(Level *level_ptr = nullptr); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
 
 private slots:
   void move_forward();

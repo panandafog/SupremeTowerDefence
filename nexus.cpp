@@ -7,7 +7,7 @@
 #include "enemy.h"
 #include "savage.h"
 
-nexus::nexus(Level *level_ptr)
+Nexus::Nexus(Level *level_ptr)
 {
   level_ptr_ = level_ptr;
   //setting graphics
@@ -54,7 +54,7 @@ nexus::nexus(Level *level_ptr)
   life_ = 100;
 }
 
-void nexus::tracking1()
+void Nexus::tracking1()
 {
   //get a list of all the items collinding with the field
   QList<QGraphicsItem *> Items = field->collidingItems();
@@ -69,7 +69,7 @@ void nexus::tracking1()
   for (size_t i = 0, n = Items.size(); i < n; i++) {
 
     //need to dynamic cast to see if object inside is an enemy
-    enemy *enem = dynamic_cast<enemy *>(Items[i]);
+    Enemy *enem = dynamic_cast<Enemy *>(Items[i]);
 
     if (enem) {
       //this evaluates to true if the dynamic cast is in fact successful, if not then: NULL_PTR

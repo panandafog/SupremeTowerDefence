@@ -3,12 +3,13 @@
 #include <QGraphicsPixmapItem>
 #include "level.h"
 
-class gameMap: public QGraphicsPixmapItem
+class Map: public QGraphicsPixmapItem
 {
-
 public:
-  gameMap(/*QGraphicsItem *parent = 0*/ Level *level_ptr = nullptr);
+  Map(/*QGraphicsItem *parent = 0*/ Level *level_ptr = nullptr);
+
 protected:
   Level *level_ptr_;
+
 };
 #endif // GAMEMAP_H

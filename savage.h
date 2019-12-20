@@ -10,12 +10,12 @@
 #include "enemy.h"
 #include "level.h"
 
-class savage: public enemy
+class Savage: public Enemy
 {
   Q_OBJECT
 
 public:
-  savage(Level *level_ptr = nullptr); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
+  Savage(Level *level_ptr = nullptr); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
 
 private slots:
   void move_forward();

@@ -5,12 +5,14 @@
 #include "tower.h"
 #include "level.h"
 
-class strongtower: public tower
+class StrongTower: public Tower
 {
   Q_OBJECT
+
 public:
-  strongtower(Level *level_ptr = nullptr);
+  StrongTower(Level *level_ptr = nullptr);
   void  attackTarget();
+
 private slots:
   void tracking();
 };

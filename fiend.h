@@ -10,12 +10,12 @@
 #include "enemy.h"
 #include "level.h"
 
-class fiend: public enemy
+class Fiend: public Enemy
 {
   Q_OBJECT
 
 public:
-  fiend(Level *level_ptr = nullptr); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
+  Fiend(Level *level_ptr = nullptr); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
 
 public slots:
   void move_forward();

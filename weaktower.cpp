@@ -9,7 +9,7 @@
 #include <QPen>
 #include <QGraphicsScene>
 
-weaktower::weaktower(Level *level_ptr)
+WeakTower::WeakTower(Level *level_ptr)
 {
   level_ptr_ = level_ptr;
   //setting graphics
@@ -54,9 +54,9 @@ weaktower::weaktower(Level *level_ptr)
   timer->start(1000);
 }
 
-void weaktower::attackTarget()
+void WeakTower::attackTarget()
 {
-  bullet *bull2 = new bullet();
+  Bullet *bull2 = new Bullet();
   bull2->setPos(x() + 25, y() + 35); //centering the bullet
 
   //makes it so the path of the bullet is parallel to the line to the target
@@ -67,7 +67,7 @@ void weaktower::attackTarget()
   level_ptr_->scene_->addItem(bull2);
 }
 
-void weaktower::tracking()
+void WeakTower::tracking()
 {
-  tower::tracking();
+  Tower::tracking();
 }

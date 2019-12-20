@@ -5,11 +5,12 @@
 #include <QGraphicsPixmapItem>
 #include "level.h"
 
-class nexus: public tower
+class Nexus: public Tower
 {
 public:
-  nexus(Level *level_ptr = nullptr);
   int life_;
+  Nexus(Level *level_ptr = nullptr);
+
 private slots:
   void tracking1();
 };

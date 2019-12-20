@@ -9,13 +9,12 @@
 #include <QPolygonF>
 #include "level.h"
 
-class enemy: public QObject, public QGraphicsPolygonItem
+class Enemy: public QObject, public QGraphicsPolygonItem
 {
-
   Q_OBJECT //need to include QOBJECT macro
 
 public:
-  enemy(Level *level_ptr = nullptr); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
+  Enemy(Level *level_ptr = nullptr); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
   void rotateToPoint(QPointF p); //will take a point and get enemy to face that point
 
   int getPointIndex();

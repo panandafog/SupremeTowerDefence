@@ -4,7 +4,7 @@
 #include <qmath.h>
 #include <QObject>
 
-bullet::bullet(QGraphicsItem *parent)
+Bullet::Bullet(QGraphicsItem *parent)
 {
   //set graphics
   setPixmap(QPixmap(":/images/mixtape.png"));
@@ -20,7 +20,7 @@ bullet::bullet(QGraphicsItem *parent)
 }
 
 //THE MOVE FUNCTION
-void bullet::move()
+void Bullet::move()
 {
   double stepSize = 60;
   double theta = rotation(); //degrees
@@ -31,22 +31,22 @@ void bullet::move()
   setPos(x() + dx, y() + dy);
 }
 
-double bullet::getMaxRange()
+double Bullet::getMaxRange()
 {
   return maxRange_;
 }
 
-double bullet::getDistanceTravelled()
+double Bullet::getDistanceTravelled()
 {
   return distanceTravelled_;
 }
 
-void bullet::setMaxRange(double range)
+void Bullet::setMaxRange(double range)
 {
   maxRange_ = range;
 }
 
-void bullet::setDistanceTravelled(double distance)
+void Bullet::setDistanceTravelled(double distance)
 {
   distanceTravelled_ = distance;
 }

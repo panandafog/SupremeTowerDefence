@@ -10,24 +10,24 @@
 #include "level.h"
 #include "enemy.h"
 
-tower::tower(Level *level_ptr)
+Tower::Tower(Level *level_ptr)
 {
   level_ptr_ = level_ptr;
 }
 
-double tower::distanceTo(QGraphicsItem *items)
+double Tower::distanceTo(QGraphicsItem *items)
 {
   //make a line between the tower and item and then determine it's size
   QLineF ln(pos(), items->pos());
   return ln.length();
 }
 
-void tower::attackTarget()
+void Tower::attackTarget()
 {
 
 }
 
-void tower::tracking()
+void Tower::tracking()
 {
   //get a list of all the items collinding with the field
   QList<QGraphicsItem *> Items = field->collidingItems();
@@ -45,7 +45,7 @@ void tower::tracking()
   for (size_t i = 0, n = Items.size(); i < n; i++) {
 
     //need to dynamic cast to see if object inside is an enemy
-    enemy *enem = dynamic_cast<enemy *>(Items[i]);
+    Enemy *enem = dynamic_cast<Enemy *>(Items[i]);
 
     if (enem) {
       //this evaluates to true if the dynamic cast is in fact successful, if not then: NULL_PTR
@@ -63,7 +63,7 @@ void tower::tracking()
   }
 }
 
-void tower::tracking1()
+void Tower::tracking1()
 {
   int okayhi = 1;
 }

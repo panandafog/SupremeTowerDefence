@@ -7,7 +7,7 @@
 #include <QPen>
 #include <QGraphicsScene>
 
-medtower::medtower(Level *level_ptr)
+MedTower::MedTower(Level *level_ptr)
 {
   level_ptr_ = level_ptr;
   //setting graphics
@@ -52,11 +52,11 @@ medtower::medtower(Level *level_ptr)
   timer->start(1000);
 }
 
-void medtower::attackTarget()
+void MedTower::attackTarget()
 {
-  bullet *bull2 = new bullet();
-  bullet *bull3 = new bullet();
-  bullet *bull4 = new bullet();
+  Bullet *bull2 = new Bullet();
+  Bullet *bull3 = new Bullet();
+  Bullet *bull4 = new Bullet();
 
   bull2->setPixmap(QPixmap(":/images/fire.png"));
   bull2->setPos(x() + 30, y() + 35); //centering the bullet
@@ -81,7 +81,7 @@ void medtower::attackTarget()
   level_ptr_->scene_->addItem(bull4);
 }
 
-void medtower::tracking()
+void MedTower::tracking()
 {
-  tower::tracking();
+  Tower::tracking();
 }

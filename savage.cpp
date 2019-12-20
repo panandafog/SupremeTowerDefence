@@ -10,7 +10,7 @@
 #include <QPointF>
 #include <QPainter>
 
-savage::savage(Level *level_ptr)
+Savage::Savage(Level *level_ptr)
 {
   level_ptr_ = level_ptr;
   // set graphics
@@ -41,8 +41,8 @@ savage::savage(Level *level_ptr)
 
 }
 
-void savage::move_forward()
+void Savage::move_forward()
 {
-  enemy::move_forward();
+  Enemy::move_forward();
 
 }

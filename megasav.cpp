@@ -11,7 +11,7 @@
 #include <QPainter>
 #include "enemy.h"
 
-megasav::megasav(Level *level_ptr)
+Megasav::Megasav(Level *level_ptr)
 {
   level_ptr_ = level_ptr;
   // set graphics
@@ -44,7 +44,7 @@ megasav::megasav(Level *level_ptr)
   timer->start(150);
 }
 
-void megasav::move_forward()
+void Megasav::move_forward()
 {
-  enemy::move_forward();
+  Enemy::move_forward();
 }

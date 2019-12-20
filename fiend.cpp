@@ -11,7 +11,7 @@
 #include <QPainter>
 #include "enemy.h"
 
-fiend::fiend(Level *level_ptr)
+Fiend::Fiend(Level *level_ptr)
 {
   level_ptr_ = level_ptr;
 
@@ -42,8 +42,8 @@ fiend::fiend(Level *level_ptr)
   timer->start(150);
 }
 
-void fiend::move_forward()
+void Fiend::move_forward()
 {
-  enemy::move_forward();
+  Enemy::move_forward();
 }
 
