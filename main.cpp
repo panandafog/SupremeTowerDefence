@@ -1,14 +1,10 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include "game.h"
-
-Game *game;
+#include "level.h"
 
 int main(int argc, char *argv[])
 {
   QApplication app(argc, argv);
-
-  game = new Game();
 
   MainWindow mainWindow;
   mainWindow.show();

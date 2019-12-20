@@ -1,13 +1,14 @@
 #ifndef NEXUS_H
 #define NEXUS_H
 #include "tower.h"
-#include "QObject"
-#include "QGraphicsPixmapItem"
+#include <QObject>
+#include <QGraphicsPixmapItem>
+#include "level.h"
 
 class nexus: public tower
 {
 public:
-  nexus(QGraphicsItem *parent = 0);
+  nexus(Level *level_ptr = nullptr);
   int life_;
 private slots:
   void tracking1();

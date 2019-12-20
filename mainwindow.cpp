@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include <iostream>
 
-extern Game *game;
+extern Level *game;
 
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
@@ -23,7 +23,7 @@ void MainWindow::on_pushButton_clicked()
   //SecondWindow *level = new SecondWindow;
   //level->showFullScreen();
   //this->close();
-
+  game = new Level();
   game->show();
   this->close();
 

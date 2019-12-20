@@ -1,7 +1,5 @@
 #include "strongtower.h"
-#include "QTimer"
-#include "bullet.h"
-#include "game.h"
+#include <QTimer>
 #include <QPixmap>
 #include <QVector>
 #include <QPointF>
@@ -9,10 +7,9 @@
 #include <QPen>
 #include <QGraphicsScene>
 
-extern Game *game; //global variable
-
-strongtower::strongtower(QGraphicsItem *parent)
+strongtower::strongtower(Level *level_ptr)
 {
+  level_ptr_ = level_ptr;
   //setting graphics
   setPixmap(QPixmap(":/images/charmander.png"));
   this->setPos(400, 400);
@@ -66,7 +63,7 @@ void strongtower::attackTarget()
   int angle = -1 * ln.angle(); // gives you the angle of the line in counter clockwise so we multiply by -1
 
   bull2->setRotation(angle);
-  game->scene_->addItem(bull2);
+  level_ptr_->scene_->addItem(bull2);
 }
 
 

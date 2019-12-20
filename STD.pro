@@ -19,8 +19,8 @@ SOURCES += \
     bullet.cpp \
     enemy.cpp \
     fiend.cpp \
-    game.cpp \
     gamemap.cpp \
+    level.cpp \
     main.cpp \
     mainwindow.cpp \
     medtower.cpp \
@@ -35,8 +35,8 @@ HEADERS += \
     bullet.h \
     enemy.h \
     fiend.h \
-    game.h \
     gamemap.h \
+    level.h \
     mainwindow.h \
     medtower.h \
     megasav.h \

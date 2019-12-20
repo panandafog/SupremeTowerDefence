@@ -9,9 +9,9 @@
 #include <QPolygonF>
 #include <QPointF>
 #include <QPainter>
-enemy::enemy(QGraphicsItem *parent)
+enemy::enemy(Level *level_ptr)
 {
-
+  level_ptr_ = level_ptr;
 }
 
 int enemy::getPointIndex()

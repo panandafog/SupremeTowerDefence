@@ -7,6 +7,7 @@
 #include <QThread>
 #include <QtCore>
 #include <QPolygonF>
+#include "level.h"
 
 class enemy: public QObject, public QGraphicsPolygonItem
 {
@@ -14,7 +15,7 @@ class enemy: public QObject, public QGraphicsPolygonItem
   Q_OBJECT //need to include QOBJECT macro
 
 public:
-  enemy(QGraphicsItem *parent = 0); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
+  enemy(Level *level_ptr = nullptr); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
   void rotateToPoint(QPointF p); //will take a point and get enemy to face that point
 
   int getPointIndex();
@@ -33,8 +34,11 @@ protected:
   QPointF destination_; //point to travel towards
   int pointIndex_; //which point are we at in list of points
   int stepSize_;
+
   double health_;
   QPolygonF poly2_;
+
+  Level *level_ptr_;
 };
 
 #endif // ENEMY_H

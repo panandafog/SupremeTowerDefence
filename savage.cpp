@@ -10,8 +10,9 @@
 #include <QPointF>
 #include <QPainter>
 
-savage::savage(QGraphicsItem *parent)
+savage::savage(Level *level_ptr)
 {
+  level_ptr_ = level_ptr;
   // set graphics
   QPolygonF poly;
   poly << QPointF(0, 0)

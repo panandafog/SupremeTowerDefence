@@ -1,17 +1,15 @@
-#include <QPixmap>
 #include "nexus.h"
-#include "tower.h"
-#include "game.h"
-#include "QTimer"
-#include "QPen"
-#include "QPointF"
-#include "QDebug"
+#include <QPixmap>
+#include <QTimer>
+#include <QPen>
+#include <QPointF>
+#include <QDebug>
 #include "enemy.h"
 #include "savage.h"
-extern Game *game;  //global variable
 
-nexus::nexus(QGraphicsItem *parent)
+nexus::nexus(Level *level_ptr)
 {
+  level_ptr_ = level_ptr;
   //setting graphics
   setPixmap(QPixmap(":/images/nexus.png"));
   this->setPos(200, 400);

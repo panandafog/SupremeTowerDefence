@@ -6,15 +6,16 @@
 #include <QPointF> //for points, f version is floating point, additional member functions (e.g. return angle)
 #include <QThread>
 #include <QtCore>
-#include "enemy.h"
 #include <QGraphicsObject>
+#include "enemy.h"
+#include "level.h"
 
 class fiend: public enemy
 {
   Q_OBJECT
 
 public:
-  fiend(QGraphicsItem *parent = 0); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
+  fiend(Level *level_ptr = nullptr); //always include the line in constructor, allows classes to have a parent, other programmers can give this a parent (or you)
 
 public slots:
   void move_forward();

@@ -5,17 +5,14 @@
 #include <QPolygonF>
 #include <QPen>
 #include <QGraphicsScene>
-#include "bullet.h"
-#include "game.h"
 #include <QTimer>
+#include "bullet.h"
+#include "level.h"
 #include "enemy.h"
 
-
-extern Game *game;  //global variable
-
-tower::tower(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent)
+tower::tower(Level *level_ptr)
 {
-
+  level_ptr_ = level_ptr;
 }
 
 double tower::distanceTo(QGraphicsItem *items)
@@ -27,7 +24,6 @@ double tower::distanceTo(QGraphicsItem *items)
 
 void tower::attackTarget()
 {
-
 
 }
 
@@ -51,7 +47,8 @@ void tower::tracking()
     //need to dynamic cast to see if object inside is an enemy
     enemy *enem = dynamic_cast<enemy *>(Items[i]);
 
-    if (enem) { //this evaluates to true if the dynamic cast is in fact successful, if not then: NULL_PTR
+    if (enem) {
+      //this evaluates to true if the dynamic cast is in fact successful, if not then: NULL_PTR
       double thisDist = distanceTo(enem);
 
       if (thisDist < closest) {
@@ -63,10 +60,7 @@ void tower::tracking()
       attackDest = closestPt;
       attackTarget();
     }
-
   }
-
-
 }
 
 void tower::tracking1()

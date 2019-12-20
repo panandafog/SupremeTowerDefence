@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "game.h"
+#include "level.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -25,6 +25,7 @@ private slots:
 private:
   Ui::MainWindow *ui_;
   //SecondWindow *level;
+  Level *game;
 
 };
 #endif // MAINWINDOW_H

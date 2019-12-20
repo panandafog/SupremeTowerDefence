@@ -11,8 +11,10 @@
 #include <QPainter>
 #include "enemy.h"
 
-fiend::fiend(QGraphicsItem *parent)
+fiend::fiend(Level *level_ptr)
 {
+  level_ptr_ = level_ptr;
+
   // set graphics
   poly2_ << QPointF(0, 0)
          << QPointF(30, 0)

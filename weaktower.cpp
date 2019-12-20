@@ -1,7 +1,7 @@
 #include "weaktower.h"
 #include "QTimer"
 #include "bullet.h"
-#include "game.h"
+#include "level.h"
 #include <QPixmap>
 #include <QVector>
 #include <QPointF>
@@ -9,10 +9,9 @@
 #include <QPen>
 #include <QGraphicsScene>
 
-extern Game *game;  //global variable
-
-weaktower::weaktower(QGraphicsItem *parent)
+weaktower::weaktower(Level *level_ptr)
 {
+  level_ptr_ = level_ptr;
   //setting graphics
   setPixmap(QPixmap(":/images/chari.png"));
   this->setPos(200, 200);
@@ -65,7 +64,7 @@ void weaktower::attackTarget()
   int angle = -1 * ln.angle(); // gives you the angle of the line in counter clockwise so we multiply by -1
 
   bull2->setRotation(angle);
-  game->scene_->addItem(bull2);
+  level_ptr_->scene_->addItem(bull2);
 }
 
 void weaktower::tracking()

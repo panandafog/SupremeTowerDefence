@@ -11,8 +11,9 @@
 #include <QPainter>
 #include "enemy.h"
 
-megasav::megasav(QGraphicsItem *parent)
+megasav::megasav(Level *level_ptr)
 {
+  level_ptr_ = level_ptr;
   // set graphics
   QPolygonF poly3;
   poly3 << QPointF(0, 0)

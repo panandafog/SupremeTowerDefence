@@ -1,17 +1,15 @@
 #include "medtower.h"
-#include "QTimer"
-#include "bullet.h"
-#include "game.h"
+#include <QTimer>
 #include <QPixmap>
 #include <QVector>
 #include <QPointF>
 #include <QPolygonF>
 #include <QPen>
 #include <QGraphicsScene>
-extern Game *game; //global variable
 
-medtower::medtower(QGraphicsItem *parent)
+medtower::medtower(Level *level_ptr)
 {
+  level_ptr_ = level_ptr;
   //setting graphics
   setPixmap(QPixmap(":/images/charmeleon.png"));
   this->setPos(200, 400);
@@ -74,13 +72,13 @@ void medtower::attackTarget()
   int angle = -1 * ln.angle(); // gives you the angle of the line in counter clockwise so we multiply by -1
 
   bull2->setRotation(angle);
-  game->scene_->addItem(bull2);
+  level_ptr_->scene_->addItem(bull2);
 
   bull3->setRotation(angle + 10);
-  game->scene_->addItem(bull3);
+  level_ptr_->scene_->addItem(bull3);
 
   bull4->setRotation(angle - 10);
-  game->scene_->addItem(bull4);
+  level_ptr_->scene_->addItem(bull4);
 }
 
 void medtower::tracking()

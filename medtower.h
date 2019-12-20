@@ -3,13 +3,13 @@
 #include "QTimer"
 #include "bullet.h"
 #include "tower.h"
-#include "game.h"
+#include "level.h"
 
 class medtower: public tower
 {
   Q_OBJECT
 public:
-  medtower(QGraphicsItem *parent = 0);
+  medtower(Level *level_ptr = nullptr);
   void  attackTarget();
 private slots:
   void tracking();
