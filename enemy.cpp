@@ -11,6 +11,7 @@
 #include <QPainter>
 Enemy::Enemy(Level *level_ptr)
 {
+  qDebug() << "Enemy creating";
   level_ptr_ = level_ptr;
 }
 
@@ -59,7 +60,7 @@ void Enemy::move_forward()
     pointIndex_++;
 
     if (pointIndex_ >= points_.size()) {
-      // qDebug()<<"Damn bukiki, back at it again with the barakis!";
+      qDebug() << "Something crazy";
       return;
     }
 

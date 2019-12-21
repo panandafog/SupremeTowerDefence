@@ -17,10 +17,10 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
+      <x>40</x>
+      <y>90</y>
       <width>85</width>
-      <height>151</height>
+      <height>221</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -28,15 +28,22 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="playDemoButton">
        <property name="text">
-        <string>Play</string>
+        <string>Play demo</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="playLevel1Button">
+       <property name="text">
+        <string>Play level 1</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -46,7 +53,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Close</string>
+     <string>Exit</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">

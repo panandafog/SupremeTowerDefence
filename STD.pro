@@ -17,10 +17,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     bullet.cpp \
+    demo.cpp \
     enemy.cpp \
     fiend.cpp \
     gamemap.cpp \
     level.cpp \
+    level_1.cpp \
     main.cpp \
     mainwindow.cpp \
     medtower.cpp \
@@ -33,10 +35,12 @@ SOURCES += \
 
 HEADERS += \
     bullet.h \
+    demo.h \
     enemy.h \
     fiend.h \
     gamemap.h \
     level.h \
+    level_1.h \
     mainwindow.h \
     medtower.h \
     megasav.h \

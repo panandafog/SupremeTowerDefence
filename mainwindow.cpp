@@ -1,8 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
-
-extern Level *game;
+#include "demo.h"
 
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
@@ -18,18 +17,29 @@ MainWindow::~MainWindow()
   delete ui_;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_playDemoButton_clicked()
 {
   //SecondWindow *level = new SecondWindow;
   //level->showFullScreen();
   //this->close();
-  game = new Level();
-  game->show();
+  level_ = new Demo();
+  level_->show();
   this->close();
 
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_playLevel1Button_clicked()
+{
+  //SecondWindow *level = new SecondWindow;
+  //level->showFullScreen();
+  //this->close();
+  level_ = new Demo();
+  level_->show();
+  this->close();
+
+}
+
+void MainWindow::on_exitButton_clicked()
 {
   this->close();
 }

@@ -9,9 +9,6 @@ public:
   Level();
   QGraphicsScene *scene_;
 
-private:
-  void mousePressEvent(QMouseEvent *event);
 };
-
 
 #endif // GAME_H

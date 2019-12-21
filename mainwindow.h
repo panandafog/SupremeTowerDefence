@@ -20,11 +20,12 @@ public:
   ~MainWindow();
   void close_clicked();
 private slots:
-  void on_pushButton_clicked();
-  void on_pushButton_2_clicked();
+  void on_playDemoButton_clicked();
+  void on_playLevel1Button_clicked();
+  void on_exitButton_clicked();
 private:
   Ui::MainWindow *ui_;
-  Level *game;
+  Level *level_;
 
 };
 #endif // MAINWINDOW_H

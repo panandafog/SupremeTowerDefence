@@ -44,5 +44,4 @@ Savage::Savage(Level *level_ptr)
 void Savage::move_forward()
 {
   Enemy::move_forward();
-
 }
